@@ -162,7 +162,7 @@ class _LoginViewState extends State<LoginView> with TickerProviderStateMixin {
                             onFieldSubmitted: (_) => _login(vm),
                             validator: Validators.password,
                             trailing: GestureDetector(
-                              onTap: (){},
+                              onTap: () => Navigator.pushNamed(context, '/forgot-password'),
                               child: Text('Forgot password?',
                                   style: AppTextStyles.label.copyWith(color: AppColors.primary, fontSize: 13)),
                             ),

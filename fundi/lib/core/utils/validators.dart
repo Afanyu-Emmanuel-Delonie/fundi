@@ -16,9 +16,9 @@ class Validators {
     return null;
   }
 
-  static String? confirmPassword(String? value){
-    if(value == null || value.isEmpty) return "repeat the password above";
-    if(value != password(value)) return 'Passwords do not match try again';
+  static String? confirmPassword(String? value, String password) {
+    if (value == null || value.isEmpty) return 'Repeat the password above.';
+    if (value != password) return 'Passwords do not match.';
     return null;
   }
 

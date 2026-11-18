@@ -3,8 +3,12 @@ import 'package:provider/provider.dart';
 
 import 'core/theme/app_theme.dart';
 import 'data/repository/auth_repository.dart';
+import 'features/auth/view/forgot_password_view.dart';
 import 'features/auth/view/login_view.dart';
+import 'features/auth/view/register_view.dart';
+import 'features/auth/view_model/forgot_password_view_model.dart';
 import 'features/auth/view_model/login_view_model.dart';
+import 'features/auth/view_model/register_view_model.dart';
 
 import 'features/splash/splash_view.dart';
 
@@ -27,7 +31,14 @@ class MyApp extends StatelessWidget {
           create: (_) => LoginViewModel(AuthRepository()),
           child: const LoginView(),
         ),
-        '/signup': (_) => const Scaffold(body: Center(child: Text('Signup'))),
+        '/signup': (_) => ChangeNotifierProvider(
+          create: (_) => RegisterViewModel(AuthRepository()),
+          child: const RegisterView(),
+        ),
+        '/forgot-password': (_) => ChangeNotifierProvider(
+          create: (_) => ForgotPasswordViewModel(AuthRepository()),
+          child: const ForgotPasswordView(),
+        ),
         '/home': (_) => const Scaffold(body: Center(child: Text('Home'))),
       },
     );

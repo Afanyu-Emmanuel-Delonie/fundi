@@ -10,6 +10,15 @@ class AuthRepository {
     }
   }
 
+  Future<void> signUp({required String name, required String email, required String password}) async {
+    await Future.delayed(const Duration(seconds: 1));
+
+    // Demo account is already "taken"
+    if (email.trim().toLowerCase() == 'jean@example.com') {
+      throw Exception('An account with this email already exists.');
+    }
+  }
+
   Future<void> sendPasswordReset(String email) async {
     await Future.delayed(const Duration(milliseconds: 500));
   }

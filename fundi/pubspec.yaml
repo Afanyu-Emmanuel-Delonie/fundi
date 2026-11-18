@@ -38,6 +38,7 @@ dependencies:
   gif_view: ^1.0.3
   google_fonts: ^8.1.0
   provider: ^6.1.5+1
+  flutter_svg: ^2.0.17
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.4
+  flutter_launcher_icons: ^0.14.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -94,3 +97,19 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_native_splash:
+  color: "#012AED"
+  image: assets/splash/logo-mark-splash.png
+  android_12:
+    color: "#012AED"
+    image: assets/splash/logo-mark-splash.png
+  color_dark: "#012AED"
+  image_dark: assets/splash/logo-mark-splash.png
+  web: false
+
+flutter_launcher_icons:
+  image_path: "assets/splash/app-icon.png"
+  android: true
+  ios: true
+  min_sdk_android: 21
