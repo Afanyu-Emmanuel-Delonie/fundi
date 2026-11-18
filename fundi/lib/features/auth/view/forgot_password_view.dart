@@ -91,7 +91,6 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> with TickerProv
       child: Stack(
         children: [
           const Positioned.fill(child: ColoredBox(color: AppColors.surfaceMuted)),
-          const AuthBackground(),
           Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
@@ -117,6 +116,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> with TickerProv
               ),
             ),
           ),
+          const AuthBackground(),
         ],
       ),
     );

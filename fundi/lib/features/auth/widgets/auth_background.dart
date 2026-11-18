@@ -10,7 +10,9 @@ class AuthBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned.fill(
-      child: CustomPaint(painter: _CurvesPainter()),
+      child: IgnorePointer(
+        child: CustomPaint(painter: _CurvesPainter()),
+      ),
     );
   }
 }

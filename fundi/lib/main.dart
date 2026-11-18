@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'package:fundi/data/repository/auth_repository.dart';
+
 import 'core/theme/app_theme.dart';
-import 'data/repository/auth_repository.dart';
 import 'features/auth/view/forgot_password_view.dart';
 import 'features/auth/view/login_view.dart';
 import 'features/auth/view/register_view.dart';

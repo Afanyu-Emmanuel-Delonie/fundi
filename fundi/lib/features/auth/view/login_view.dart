@@ -106,7 +106,6 @@ class _LoginViewState extends State<LoginView> with TickerProviderStateMixin {
       child: Stack(
         children: [
           const Positioned.fill(child: ColoredBox(color: AppColors.surfaceMuted)),
-          const AuthBackground(),
           Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
@@ -262,6 +261,7 @@ class _LoginViewState extends State<LoginView> with TickerProviderStateMixin {
               ),
             ),
           ),
+          const AuthBackground(),
         ],
       ),
     );

@@ -113,7 +113,6 @@ class _RegisterViewState extends State<RegisterView> with TickerProviderStateMix
       child: Stack(
         children: [
           const Positioned.fill(child: ColoredBox(color: AppColors.surfaceMuted)),
-          const AuthBackground(),
           Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
@@ -302,6 +301,7 @@ class _RegisterViewState extends State<RegisterView> with TickerProviderStateMix
               ),
             ),
           ),
+          const AuthBackground(),
         ],
       ),
     );
